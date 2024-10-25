@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
+//change1
 function App() {
   const [level, setLevel] = useState(1);
   const [pin, setPin] = useState([]);
@@ -80,7 +80,7 @@ function App() {
       <button onClick={checkGuess}>Submit Guess</button>
       {message && <p>{message}</p>}
 
-      {/* Footer with credits */}
+      
       <footer>
         <p>Created by Hrishikesan on 25/10/2024</p>
       </footer>
