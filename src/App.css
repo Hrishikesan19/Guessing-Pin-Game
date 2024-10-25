@@ -17,3 +17,10 @@ button {
 h1, h2, h3 {
   margin: 10px 0;
 }
+
+footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}

@@ -79,6 +79,11 @@ function App() {
       </div>
       <button onClick={checkGuess}>Submit Guess</button>
       {message && <p>{message}</p>}
+
+      {/* Footer with credits */}
+      <footer>
+        <p>Created by Hrishikesan on 25/10/2024</p>
+      </footer>
     </div>
   );
 }
