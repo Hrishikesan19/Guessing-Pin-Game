@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Guessing-Pin-Game/static/css/main.3f9ffd82.css",
+    "main.js": "/Guessing-Pin-Game/static/js/main.dc8d305b.js",
+    "index.html": "/Guessing-Pin-Game/index.html",
+    "main.3f9ffd82.css.map": "/Guessing-Pin-Game/static/css/main.3f9ffd82.css.map",
+    "main.dc8d305b.js.map": "/Guessing-Pin-Game/static/js/main.dc8d305b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f9ffd82.css",
+    "static/js/main.dc8d305b.js"
+  ]
+}
