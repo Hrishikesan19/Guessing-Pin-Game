@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+Here's a `README.md` file for your "PIN Guessing Game" project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# PIN Guessing Game
 
-In the project directory, you can run:
+Welcome to the **PIN Guessing Game**! This is a React-based game where players attempt to guess a randomly generated PIN with distinct digits. As players progress, the difficulty level increases with each correct guess.
 
-### `npm start`
+### Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Check out the live version of the game here: [PIN Guessing Game](https://guessing-pin-game.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Random PIN Generation**: Each PIN is generated with unique digits.
+- **Increasing Difficulty**: With each level, the number of digits in the PIN increases, making it more challenging.
+- **Feedback System**: After each guess, players receive feedback on:
+  - The number of correct digits present.
+  - The number of correct digits in the correct position.
+- **Level Progression**: Correct guesses allow players to progress to higher levels with longer PINs.
 
-### `npm run build`
+## Gameplay
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Starting the Game**: Players begin at **Level 1** with a 3-digit PIN to guess.
+2. **Guessing the PIN**: The player enters a guess by filling in the input fields.
+3. **Feedback on Guess**:
+   - After each guess, feedback is given to indicate how many digits are present in the PIN and how many are in the correct position.
+4. **Leveling Up**: When the player guesses the PIN correctly, they advance to the next level, and the PIN's length increases by one digit.
+5. **Challenge**: Each level adds a new digit to the PIN, making it progressively harder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Code Walkthrough
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Key Functions and State Variables
 
-### `npm run eject`
+- **React Hooks**:
+  - `level`: Represents the current level in the game.
+  - `pin`: Stores the randomly generated PIN.
+  - `input`: Stores the player’s current guess.
+  - `message`: Displays feedback to the player.
+  - `numDigits`: Determines the length of the PIN based on the level.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **generateRandomPin(n)**: Generates a random PIN with `n` distinct digits. Throws an error if `n` exceeds 10, as only 10 unique digits (0-9) are available.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **handleInputChange(index, value)**: Handles changes in the input fields, updating the `input` array with the player’s guess.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **checkGuess()**: Compares the player’s guess with the randomly generated PIN:
+  - `count`: Total correct digits (present in the PIN).
+  - `inPlace`: Correct digits that are in the correct position.
+  - Provides feedback to the player and, if the guess is correct, advances the player to the next level.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Components
 
-## Learn More
+- **Input Fields**: Dynamically generated based on `numDigits`, allowing players to input their guesses.
+- **Submit Button**: Triggers the `checkGuess` function to verify the player’s guess.
+- **Feedback Message**: Provides feedback based on the player’s input.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation and Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run the project locally:
 
-### Code Splitting
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/guesspin/pin-guessing-game
+   cd pin-guessing-game
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the game in action.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies Used
 
-### Advanced Configuration
+- **React** for building the UI.
+- **CSS** for styling.
+- **JavaScript** for game logic.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Hint System**: Add hints for players after a few incorrect attempts.
+- **Score Tracking**: Track player scores or attempts to add more competitive elements.
+- **Timer**: Include a timer to increase challenge at higher levels.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+
+Created by Hrishikesan on 25/10/2024.
+
